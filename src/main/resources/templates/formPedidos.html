@@ -253,7 +253,7 @@
 
                     <label for="" class="col-sm-2 col-form-label">TOTAL</label>
                     <div class="col-ms-6">
-                        <input type="text" th:field="*{Total}" class="form-control" th:errorclass="'form-control alert-danger'" readonly>
+                        <input type="text" th:field="*{Total}" class="form-control" th:errorclass="'form-control alert-danger'" >
                         <label class="form-text text-danger" th:if ="${#fields.hasErrors('Total')}" th:errors="*{Total}"></label>
                     </div>
     
@@ -261,6 +261,7 @@
                 </div >
 
             </div>
+            
             
             <div class="form-group" style="padding-top: 2em ">
                 <div class="col-ms-6">

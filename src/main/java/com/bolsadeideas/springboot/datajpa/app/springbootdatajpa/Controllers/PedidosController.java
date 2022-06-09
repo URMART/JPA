@@ -5,8 +5,11 @@ import java.util.Map;
 import javax.validation.Valid;
 
 import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.Dao.IClienteDao;
+import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.Dao.IDetallesPDao;
 import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.Entity.Cliente;
+import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.Entity.DetallesP;
 import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.service.IClienteService;
+import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.service.IDetallesPService;
 import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.service.IPedidosService;
 import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.Dao.IPedidosDao;
 import com.bolsadeideas.springboot.datajpa.app.springbootdatajpa.Models.Entity.Pedidos;
@@ -30,6 +33,7 @@ public class PedidosController {
 
     // nueva formca con el service
     @Autowired // preguntar para que sirve
+
     private IPedidosService pedidosService;
 
     @GetMapping("/listarPedidos")
@@ -47,15 +51,15 @@ public class PedidosController {
 
         // instanciando la clase cliente o entidad cliente
         Pedidos pedidos = new Pedidos();
-
         // model put para mostrar cliente
         model.put("pedidos", pedidos);
-
         model.put("titulo", "formulario pedidos");
+        
 
         return "formPedidos";
 
     }
+
 
     @RequestMapping(value = "/formPedidos", method = RequestMethod.POST) // guarda la informacion en el mismo /form
     // ..post...toma los datos y depues los guarda
