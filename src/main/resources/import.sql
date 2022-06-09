@@ -11,3 +11,4 @@ INSERT INTO pedidos(id, celular_destino, descuento, direccion_destino,estado,fec
 INSERT INTO pedidos(id, celular_destino, descuento, direccion_destino,estado,fecha,fecha_entrega,nombre_destino,sub_total,total,id_cliente)   VALUES(12, '78788', 2, 'cr6','activo', '3000-10-03','3000-10-06','caicedo',10,11,1017);
 INSERT INTO pedidos(id, celular_destino, descuento, direccion_destino,estado,fecha,fecha_entrega,nombre_destino,sub_total,total,id_cliente)   VALUES(13, '78788', 2, 'cr6','activo', '3000-10-03','3000-10-06','caicedo',10,11,1017);
 
+INSERT INTO detallesp(id, id_pedidos, id_productos, descuento,cantidad,valor)  VALUES(1, 1, 1, 4, 2,1);

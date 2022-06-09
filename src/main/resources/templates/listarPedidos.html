@@ -77,6 +77,7 @@
                 <th> SUB_TOTAL</th>
                 <th>DESCUENTO</th>
                 <th>TOTAL</th>
+                <th>Detalles Valor</th>
                 
             </thead>
 
@@ -96,6 +97,7 @@
                     <td th:text="${pedidos.SubTotal}"></td>
                     <td th:text="${pedidos.Descuento}"></td>
                     <td th:text="${pedidos.Total}"></td>
+                    
                     <td ><a th:href= "@{/formPedidos/} + ${pedidos.id}" class="btn btn-primary btn-xs " > Editar </a></td> <!-- agragando el formulario y cliente para mostrar en el  templete-->
                     <td ><a th:href= "@{/eliminarP/} + ${pedidos.id}" class="btn btn-warning btn-xs " onclick="return confirm('esta seguro de eliminar este registo')" > Eliminar </a></td>
                     
